@@ -43,7 +43,7 @@ class UserAdmin(BaseUserAdmin):
         (
             None, {
                 "classes": ("wide",),
-                "fields": ("email",  "password1", "password2", "first_name", "last_name", "is_staff", "is_active")
+                "fields": ("email", "first_name", "last_name", "password1", "password2",  "is_staff", "is_active")
             },
         ),
     )
