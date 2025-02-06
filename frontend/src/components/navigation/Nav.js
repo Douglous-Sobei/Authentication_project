@@ -14,6 +14,7 @@ const Nav = () => {
     dispatch(logout());
     dispatch(reset());
     navigate("/");
+    toast.success("You have successfully logged out!");
   };
 
   return (
@@ -27,14 +28,17 @@ const Nav = () => {
             <NavLink className="nav-childs" to="/dashboard">
               Dashboard
             </NavLink>
-            <NavLink className="nav-childs" to="/" onClick={handleLogout}>
+            <button className="nav-childs" onClick={handleLogout}>
               Logout
-            </NavLink>
+            </button>
           </>
         ) : (
           <>
-            <NavLink className="nav-childs" to="/dashboard">
-              Dashboard
+            <NavLink className="nav-childs" to="/login">
+              Login
+            </NavLink>
+            <NavLink className="nav-childs" to="/register">
+              Register
             </NavLink>
           </>
         )}
